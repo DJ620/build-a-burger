@@ -16,6 +16,25 @@ h1 {
     font-size: 50px;
 }
 
+.uneaten {
+    background-color: green;
+    color: rgb(235, 233, 233);
+}
+
+.eaten {
+    background-color: rgb(150, 150, 150);
+    color: rgba(0, 0, 0, 0.379);
+}
+
+.devour {
+    background-color: #FC440F;
+    font-weight: bold;
+}
+
+.devour:hover {
+    background-color: #dc3a0d;
+}
+
 li, button {
     font-weight: bold;
 }

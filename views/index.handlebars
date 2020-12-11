@@ -13,7 +13,7 @@
         <ul class="col-6 text-center list-group">
         {{#each burgers}}
             {{#if devoured}}
-            <li class="list-group-item disabled bg-info">{{burger_name}}</li>
+            <li class="list-group-item eaten">{{burger_name}}</li>
             {{/if}}
         {{/each}}
         </ul>
@@ -23,5 +23,5 @@
 <form class="build-burger text-center mt-5">
     <textarea class="text-center" id="burg"></textarea>
     <br>
-    <button class="lg-btn btn-primary" type="submit">Build my burger!</button>
+    <button class="btn-lg btn-primary" type="submit">Build my burger!</button>
 </form>
