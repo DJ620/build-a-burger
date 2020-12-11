@@ -1,7 +1,6 @@
 $(() => {
-    $(".eat-burger").on("click", function(event) {
-        const id = $(this).data("id");
-        console.log(id);
+    $(".eat-burger").on("click", event => {
+        const id = $(event.currentTarget).data("id");
         const eaten = {
             devoured: true
         };
@@ -9,7 +8,7 @@ $(() => {
             type: "PUT",
             data: eaten
         }).then(()=>{
-            console.log(`Customer devoured a ${$(this).data("burger")}!`);
+            console.log(`Customer devoured a(n) ${$(event.currentTarget).data("burger")}!`);
             location.reload();
         });
     });
@@ -27,5 +26,4 @@ $(() => {
             location.reload();
         });
     });
-
 });
