@@ -23,8 +23,8 @@ const orm = {
         });
     },
     insertOne: function(table, cols, vals, cb) {
-        let queryString = `INSERT INTO ${table} (${cols}) VALUES (${vals})`;
-        connection.query(queryString, (err, res) => {
+        let queryString = `INSERT INTO ${table} (${cols}) VALUES (?)`;
+        connection.query(queryString, vals, (err, res) => {
             if (err) throw err;
             cb(res);
         });

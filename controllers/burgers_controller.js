@@ -13,8 +13,8 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-    burger.insert(["burger_name", "devoured"], req.body, result => {
-        res.json({ id: insertId });
+    burger.insert(["burger_name"], [req.body.burger_name], result => {
+        res.json({ id: result.insertId });
     });
 });
 
