@@ -1,7 +1,7 @@
-<h1>Welcome to Build-A-Burger!</h1>
-<div class="container">
-    <div class="row">
-        <ul class="col-6">
+<h1 class="text-center">Welcome to Build-A-Burger!</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <ul class="col-6 text-center list-group">
         {{#each burgers}}
             {{#unless devoured}}
             {{> burgers/burger-block}}
@@ -9,17 +9,18 @@
         {{/each}}
         </ul>
 
-        <ul class="col-6">
+        <ul class="col-6 text-center list-group">
         {{#each burgers}}
             {{#if devoured}}
-            <li>{{burger_name}}</li>
+            <li class="list-group-item disabled">{{burger_name}}</li>
             {{/if}}
         {{/each}}
         </ul>
     </div>
 </div>
 
-<form class="build-burger">
-    <textarea id="burg"></textarea>
-    <button type="submit">Build my burger!</button>
+<form class="build-burger text-center mt-5">
+    <textarea class="text-center" id="burg"></textarea>
+    <br>
+    <button class="lg-btn btn-primary" type="submit">Build my burger!</button>
 </form>

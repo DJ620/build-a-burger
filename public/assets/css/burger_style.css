@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(218, 185, 0);
+}
+
+li, button {
+    font-weight: bold;
+}
+
+#burg {
+    width: 25vw;
+}
