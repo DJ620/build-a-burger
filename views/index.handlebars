@@ -1,5 +1,21 @@
 <h1>Welcome to Build-A-Burger!</h1>
 
+<ul>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block}}
+    {{/unless}}
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{burger_name}}
+    {{/if}}
+  {{/each}}
+</ul>
+
 <form class="build-burger">
     <textarea id="burg"></textarea>
     <button type="submit">Build my burger!</button>
