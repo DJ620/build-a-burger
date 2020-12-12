@@ -1,6 +1,8 @@
+// Requiring mysql npm package
 const mysql = require("mysql");
-let connection;
 
+// Setting up my connection the the mysql database
+let connection;
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -13,12 +15,14 @@ if (process.env.JAWSDB_URL) {
   });
 };
 
-  connection.connect((err) => {
-    if (err) {
-      console.error("error connecting: " + err.stack);
-      return;
-    }
-    console.log("connected as id " + connection.threadId);
-  });
+// Connecting to the mysql database when the file is run
+connection.connect((err) => {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
 
-  module.exports = connection;
+// Exporting connection to be used in other files
+module.exports = connection;
