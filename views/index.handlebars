@@ -1,8 +1,10 @@
+<!--This file holds the main content of my html-->
 <h1 class="text-center">Welcome to Build-A-Burger!</h1>
 <img src="/assets/img/burger.png" alt="burger">
 <div class="container mt-5">
     <div class="row justify-content-center align-items-center">
         <ul class="col-6 text-center">
+        <!--Each burger object inside the get request result that has devoured set to false gets sent to the burger-block.handlebars file and then sent back-->
         {{#each burgers}}
             {{#unless devoured}}
             {{> burgers/burger-block}}
@@ -11,6 +13,7 @@
         </ul>
 
         <ul class="col-6 text-center list-group">
+        <!--Each burger object inside the get request result that has devoured set to true gets assigned here-->
         {{#each burgers}}
             {{#if devoured}}
             <li class="list-group-item eaten">{{id}}. {{burger_name}}</li>
@@ -20,6 +23,7 @@
     </div>
 </div>
 
+<!--The form that collects the new burger information from the user-->
 <form class="build-burger text-center mt-5">
     <textarea class="text-center" id="burg"></textarea>
     <br>
