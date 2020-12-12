@@ -1,4 +1,5 @@
 const express = require("express");
+const dotenv = require("dotenv").config();
 const exphbs = require("express-handlebars");
 const routes = require("./controllers/burgers_controller.js");
 

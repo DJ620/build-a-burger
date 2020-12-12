@@ -17,9 +17,9 @@ img {
 }
 
 .uneaten {
-    background-color: green;
-    color: rgb(235, 233, 233);
     font-weight: bold;
+    list-style-type: none;
+    padding: 10px;
 }
 
 .eaten {
